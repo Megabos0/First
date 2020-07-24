@@ -1,0 +1,11 @@
+from datetime import datetime
+import pytz
+#Africa/Addis_Ababa
+#Asia/Karachi
+#Asia/Dubai
+#America/Argentina/Buenos_Aires
+IST = input('City: ')
+IST_PY = pytz.timezone(IST)
+
+datetime_ist = datetime.now(IST_PY)
+print("Current time in " + IST + ": " + datetime_ist.strftime('%H:%M:%S'))
